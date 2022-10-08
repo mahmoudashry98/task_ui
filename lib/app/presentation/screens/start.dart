@@ -69,10 +69,15 @@ class StartScreen extends StatelessWidget {
                 right: 26,
                 left: 26,
               ),
-              child: CustomButton(
-                text: 'Get Started',
-                height: context.height * 0.057,
-                width: context.width * 350,
+              child: InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, AppRouts.onBoardingScreen);
+                },
+                child: CustomButton(
+                  text: 'Get Started',
+                  height: context.height * 0.057,
+                  width: context.width * 350,
+                ),
               ),
             ),
           ),

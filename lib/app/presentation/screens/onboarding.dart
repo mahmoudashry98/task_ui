@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:task_ui/core/utils/assets_images_path.dart';
 import 'package:task_ui/core/utils/media_query_values.dart';
+import 'package:task_ui/core/widgets/custom_button.dart';
+
+import '../../../core/widgets/custom_text.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
@@ -8,67 +11,65 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
-        body: Stack(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 90,
-                vertical: 140,
-              ),
-              child: Image.asset(
-                alignment: Alignment.center,
-                background,
-                fit: BoxFit.cover,
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(
-                top: context.height * 0.21,
-                //left: context.width * 0.2,
-                //right: context.width * 0.22,
-              ),
-              child: Align(
-                alignment: Alignment.topCenter,
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 140),
-                  child: RichText(
-                    text: const TextSpan(
+      backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
+      body: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 80),
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Expanded(
+                    // flex: 12,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Image.asset(
+                        background,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      bottom: 50,
+                      top: 25,
+                    ),
+                    child: CustomButton(
+                      text: 'Next',
+                      height: context.height * 0.05,
+                      width: context.width * 0.3,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      bottom: 29,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        TextSpan(
-                          children: [
-                            TextSpan(
-                              text: 'Hi, My name is ',
-                              style: TextStyle(
-                                color: Color.fromRGBO(16, 16, 16, 0.8),
-                                fontSize: 19,
-                              ),
-                            ),
-                            TextSpan(
-                              text: 'Oranobot\n',
-                              style: TextStyle(
-                                color: Color.fromRGBO(0, 0, 0, 1),
-                                fontSize: 19,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            TextSpan(
-                              text:
-                                  'I will always be there to\nhelp and assist you.\n \n \nSay Start To go to Next. ',
-                              style: TextStyle(
-                                color: Color.fromRGBO(16, 16, 16, 0.8),
-                                fontSize: 19,
-                              ),
-                            ),
-                          ],
+                        Image.asset(
+                          icon,
+                          fit: BoxFit.cover,
+                        ),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        const CustomText(
+                          text: 'English',
+                          color: Color.fromRGBO(44, 44, 45, 1),
+                          size: 14,
                         ),
                       ],
                     ),
                   ),
-                ),
+                ],
               ),
             ),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
   }
 }
