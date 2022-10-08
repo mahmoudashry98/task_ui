@@ -3,6 +3,7 @@ import 'package:task_ui/core/utils/assets_images_path.dart';
 import 'package:task_ui/core/utils/media_query_values.dart';
 import 'package:task_ui/core/widgets/custom_button.dart';
 
+import '../../../config/routes/app_routes.dart';
 import '../../../core/widgets/custom_text.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -10,6 +11,7 @@ class OnBoardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
       body: Stack(
@@ -36,10 +38,15 @@ class OnBoardingScreen extends StatelessWidget {
                       bottom: 50,
                       top: 25,
                     ),
-                    child: CustomButton(
-                      text: 'Next',
-                      height: context.height * 0.05,
-                      width: context.width * 0.3,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, AppRouts.getStartedScreen);
+                      },
+                      child: CustomButton(
+                        text: 'Next',
+                        height: context.height * 0.05,
+                        width: context.width * 0.3,
+                      ),
                     ),
                   ),
                   Padding(
