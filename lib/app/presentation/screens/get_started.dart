@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:task_ui/app/presentation/widgets/receiver.dart';
 
-import 'package:task_ui/core/utils/media_query_values.dart';
 import 'package:task_ui/core/widgets/custom_text.dart';
 
+import '../../../config/routes/app_routes.dart';
 import '../../../core/utils/assets_images_path.dart';
 import '../widgets/check_box.dart';
 import '../widgets/sender.dart';
@@ -143,7 +143,9 @@ class GetStartScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: GestureDetector(
-                onTap: (){},
+                onTap: () {
+                  Navigator.pushNamed(context, AppRouts.homeScreen);
+                },
                 child: Image.asset(
                   strokeImage,
                 ),
