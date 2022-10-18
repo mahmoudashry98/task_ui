@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:task_ui/app/presentation/widgets/circle_image.dart';
 import 'package:task_ui/core/utils/media_query_values.dart';
 import 'package:task_ui/core/widgets/custom_text.dart';
 
@@ -7,6 +6,7 @@ import '../../../core/utils/app_theme_colors.dart';
 import '../../../core/utils/assets_images_path.dart';
 import '../widgets/card.dart';
 import '../widgets/card_bottom_sheet.dart';
+import '../widgets/circle_image.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -98,7 +98,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 20,
               ),
               SizedBox(
-                height: context.height * 0.32,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
@@ -280,7 +279,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      
     );
   }
 }

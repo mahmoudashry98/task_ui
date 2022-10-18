@@ -1,8 +1,7 @@
-import 'package:task_ui/app/presentation/screens/get_started.dart';
-import 'package:task_ui/app/presentation/screens/onboarding.dart';
-import 'package:task_ui/app/presentation/screens/start.dart';
-
-import '../../app/presentation/screens/home.dart';
+import '../../presentation/screens/chat_bot.dart';
+import '../../presentation/screens/home.dart';
+import '../../presentation/screens/onboarding.dart';
+import '../../presentation/screens/login.dart';
 
 class AppRouts {
   static const String initialRoute = '/';
@@ -12,8 +11,8 @@ class AppRouts {
 }
 
 final routes = {
-  AppRouts.initialRoute: (context) => const StartScreen(),
+  AppRouts.initialRoute: (context) => const LoginScreen(),
   AppRouts.onBoardingScreen: (context) => const OnBoardingScreen(),
-  AppRouts.getStartedScreen: (context) => const GetStartScreen(),
+  AppRouts.getStartedScreen: (context) => const ChatBotScreen(),
   AppRouts.homeScreen: (context) => const HomeScreen(),
 };

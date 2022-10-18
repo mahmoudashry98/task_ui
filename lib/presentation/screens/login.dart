@@ -7,8 +7,8 @@ import 'package:task_ui/core/widgets/custom_text.dart';
 
 import '../../../core/utils/app_theme_colors.dart';
 
-class StartScreen extends StatelessWidget {
-  const StartScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
